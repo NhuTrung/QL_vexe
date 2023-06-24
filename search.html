@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="header-body">
+                <div class="ant-row">
+                    <div class="logo">
+                        <a href="index.html"><img src="IMG/icon_vxr_full.svg" alt=""></a>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <a href=""><li class="csGmta">Thuê Xe</li></a>
+                            <a href=""><li class="csGmta">Tra Cứu Đơn Hàng</li></a>
+                            <a href=""><li class="csGmta">Tuyển Dụng</li></a>
+                            <li  class="csGmta"><button type="button" class="btn hotline"><p style="color: black; "><i style="padding-right: 10px;" class="fa-solid fa-phone"></i>Hotline</p></button></li>
+                            <li class="csGmta">
+                                <button type="button" class="btn"><p>Đăng Nhập</p></button>
+                            </li>
+                        </ul>
+                    </div >
+                </div>
+            </div>
+            
+         
+        </div>
+        <div class="search_a">
+            <div class="search">
+                <div class="ant">
+                  <div class="input_section">
+                    <select id="diemden">
+                        <option value="newyork">Hà Nội</option>
+                        <option value="paris">VĨnh Phúc</option>
+                        <option value="tokyo">Bắc Ninh</option>
+                      </select>
+                     <label for="" style="font-size: 14px; color: #aca1a1; text-align: left; ">Nơi Xuất Phát</label>
+                  </div>
+                  <div class="input_section">
+                    <select id="diemden">
+                        <option value="newyork">Hải Phòng</option>
+                        <option value="paris">Hà Giang</option>
+                        <option value="tokyo">Quảng Ninh</option>
+                      </select>
+                    <label for="" style="font-size: 14px; color: #aca1a1; text-align: left; ">Nơi Đến</label>
+                 </div>
+                 <div class="input_section">
+                    <input type="date">
+                    <label for="" style="font-size: 14px; color: #aca1a1; text-align: left; ">Ngày Đi</label>
+                 </div>
+                </div>
+                <div class="ant_col">
+                    <button type="button" class="ant_btn"> 
+                        <span>Tìm Chuyến</span>
+                    </button>
+                </div> 
+
+             </div>
+
+        </div>
+        <div class="route_container">
+            <div class="listResult">
+                
+                <div class="route_item">
+                    <div class="route_item_main_content">
+                      <div class="nl_route_detail">
+                        <div class="image_content">
+                          <img src="IMG/ảnh xe.jpeg" alt="">
+                        </div>
+                        <div class="right_content">
+                          <div class="nl_route_detail_info">
+                            <div class="type_container">
+                              <div class="vehicle_type">Limousine 22 phòng</div>
+                            </div>
+                            <div class="nl_from_to">
+                              <div class="nl-from-to-content">
+                                <div class="content from">
+                                  <i class="fa-solid fa-circle-dot" style="margin-right: 20px;"></i>
+                                  <div class="hour">23:59</div>
+                                  <div class="dot">●</div>&nbsp;
+                                  <div class="nl-dib">
+                                    <a class="black-text">Bến Xe Giáp Bát</a>
+                                  </div>
+                                </div>
+                                <div class="duration">6h00'</div>
+                                <div class="content to">
+                                  <i class="fa-solid fa-location-dot" style="margin-right: 20px;"></i>
+                                  <div class="hour">05:59</div>
+                                  <div class="dot">●</div>&nbsp;
+                                  <div class="nl-dib"><a class="black-text">Bến Xe Mỹ Đình</a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="route-detail-button-container">
+                                <button type="button" class="ant-btn ant-btn-link btn-detail" onclick="toggleAccordion(this)">
+                                  <span id="btn_label_show">Thông tin chi tiết</span>
+                                  <span id="btn-label-hide" style="display: none;">Ẩn thông tin chi tiết</span>
+                                  <span role="img" aria-label="up" class="anticon anticon-up" style="color: rgb(0, 96, 196); font-size: 16px;">
+                                    <svg viewBox="64 64 896 896" focusable="false" class="arrow-icon" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                                      <path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path>
+                                    </svg>
+                                  </span>
+                                </button>
+                            </div>
+                          </div>
+                          <div class="nl_fare_info"></div>
+                          <div class="nl_detail_and_action">
+                            <div class="nl_action">
+                              <div class="btn_container">
+                                <div class="btn_label" type="btn" title="Nhấp Để Đặt Vé" onclick="Accordion(this)">Chọn Chỗ</div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="detail_info_from">
+                          <div class="header_detail">
+                                    <div class="image h3">
+                                      <p>Hình Ảnh</p>
+                                    </div>
+                                    <div class="utilities h3">
+                                      <p>Tiện Ích</p>
+                                    </div>
+                                    <div class="pickup_point h3">
+                                      <p>Điểm Đón Trả</p>
+                                    </div>
+                                    <div class="policy h3">
+                                      <p>Chính Sách</p>
+                                    </div>
+                                    <div class="evaluate h3">
+                                      <p>Đánh Giá</p>
+                                    </div>
+                            </div>
+                            <div class="content_detail">
+                                  <div class="slideshow-container">
+
+                                    <div class="mySlides fade">
+                                      <div class="numbertext">1 / 3</div>
+                                      <img src="IMG/nhaxe.png" style="width:100%">
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                      <div class="numbertext">2 / 3</div>
+                                      <img src="IMG/nhaxe03.png" style="width:100%">
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                      <div class="numbertext">3 / 3</div>
+                                      <img src="IMG/nhaxe02.png" style="width:100%">
+                                    </div>
+                                    
+                                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                    <a class="next" onclick="plusSlides(1)">❯</a>
+                                    
+                                  </div>
+                                  <!-- utilities -->
+                                  <div class="utilites_wrapper">
+                                    <div class="utilites_container">
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1609837175400.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Tivi Led</div>
+                                        </div>
+                                          <div class="description"></div>
+                                          <div class="line"></div>
+                                      </div>
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1610093097657.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Gối Ôm</div>
+                                        </div>
+                                          <div class="description">Nhà xe có trang bị gối ôm cho hành khách</div>
+                                          <div class="line"></div>
+                                      </div>
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1610093097657.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Gối Ôm</div>
+                                        </div>
+                                          <div class="description">Nhà xe có trang bị gối ôm cho hành khách</div>
+                                          <div class="line"></div>
+
+                                      </div>
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1610093097657.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Gối Ôm</div>
+                                        </div>
+                                          <div class="description">Nhà xe có trang bị gối ôm cho hành khách</div>
+                                          <div class="line"></div>
+                                      </div>
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1610093097657.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Gối Ôm</div>
+                                        </div>
+                                          <div class="description">Nhà xe có trang bị gối ôm cho hành khách</div>
+                                          <div class="line"></div>
+                                      </div>
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1610093097657.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Gối Ôm</div>
+                                        </div>
+                                          <div class="description">Nhà xe có trang bị gối ôm cho hành khách</div>
+                                          <div class="line"></div>
+                                      </div>
+                                      <div class="utilites_description">
+                                        <div class="utilites_image">
+                                          <img src="//static.vexere.com/production/utilities/1610093097657.png" alt="zz" style="width: 32px; height: 32px;">
+                                          <div class="info">Gối Ôm</div>
+                                        </div>
+                                          <div class="description">Nhà xe có trang bị gối ôm cho hành khách</div>
+                                          <div class="line"></div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  <!-- pickup_point -->
+                                  <div class="pickup_point_wrapper">
+                                    <div class="pickup_point_container">
+                                      <div class="pickup_point_note">
+                                        <b>Lưu Ý :</b>
+                                        "Các mốc thời gian đón, trả bên dưới là thời gian dự kiến. Lịch này có thể thay đổi tuỳ tình hình thực tế."
+                                      </div>
+                                      <div class="pickup_point_list">
+                                        <div class="pickup_list_left">
+                                          <div class="list_label">Điểm Đón</div>
+                                          <ul class="pickup_list">
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+
+                                          </ul>
+                                        </div>
+                                        <div class="pickup_list_left">
+                                          <div class="list_label">Điểm Đón</div>
+                                          <ul class="pickup_list">
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+                                            <li>
+                                              <div>
+                                                <b>21:30</b>
+                                                <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                              </div>
+                                              <div class="address-container">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                <span class="address">Giải Phóng</span>
+                                              </div>
+                                            </li>
+
+                                          </ul>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                    
+                            </div>
+                      </div>
+                      <div class="nl_booking_container">
+                        <div class="nl_booking_expand">
+                          <div class="steps_contents">
+                          
+                            <div id="seat-map">
+                              <table>
+                            <div class="group_row">
+                              <div class="group_row_left gr_row">
+                                <div class="row">
+                                  <div class="seat" data-id="A1" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="A2" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="A3" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="A4" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat"data_id="A5" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="A6" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="A7" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="A8" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="A9" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="A10" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                              </div>
+                              <div class="group_row_right gr_row">
+                                <div class="row">
+                                  <div class="seat" data-id="B1" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="B2" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="B3" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="B4" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="B5" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="B6" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="B7" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="B8" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                                <div class="row">
+                                  <div class="seat" data-id="B9" data-price="150000"><i class="fas fa-chair"></i></div>
+                                  <div class="seat" data-id="B10" data-price="150000"><i class="fas fa-chair"></i></div>
+                                </div>
+                              </div>
+                            </div>
+                                
+                                <!-- Các hàng ghế khác -->
+                              </table>
+                            </div>
+                            <div id="info-form" style="display: none;">
+                             
+                              <form>
+                            
+                              <div class="pickup_point_list">
+                                <div class="pickup_list_left">
+                                  <div class="list_label">Điểm Đón</div>
+                                  <ul class="pickup_list">
+                                    <li>
+                                     
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                      
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+
+                                  </ul>
+                                </div>
+                                <div class="pickup_list_left">
+                                  <div class="list_label">Điểm Đón</div>
+                                  <ul class="pickup_list">
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div>
+                                        <input type="radio">
+                                        <b>21:30</b>
+                                        <span>&nbsp;• Bến Xe Giáp Bát </span>
+                                      </div>
+                                      <div class="address-container">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="address">Giải Phóng</span>
+                                      </div>
+                                    </li>
+
+                                  </ul>
+                                </div>
+
+                              </div>
+                                <button id="back-btn">Quay lại</button>
+                              </form>
+                            </div>
+                           
+                          </div>
+                            <div id="destination-form" style="display: none;">
+                              <form>
+                                <p>Họ Tên</p>
+                                <input type="text" id="full-name-input">
+                                <p>Số Điện Thoại</p>
+                                <input type="text" id="phone-input">
+                                <p>Email</p>
+                                <input type="email" id="email-input">
+                                <button id="back-btn">Quay lại</button>
+                              </form>
+                              <button type="submit" id="register-btn">Đăng ký</button>
+                            </div>
+                            <div id="gr" >
+                             
+                              <div class="gr_left">
+                                <div id="selected-seats"></div>
+                              </div>
+                              <div class="gr_right">
+                                <div id="total-price"></div>
+                              
+                              <button id="continue-btn">Tiếp tục</button>
+                              </div>
+                              
+                           </div>
+
+                          
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+        </div>
+
+
+    
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/2f8b021380.js" crossorigin="anonymous"></script>
+<script src="js/search.js"></script>
+
+</html>
